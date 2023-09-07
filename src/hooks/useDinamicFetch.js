@@ -19,7 +19,10 @@ export default function useDinamicFetch(fetchFunction, dinamicValue) {
          .finally(setIsLoading(false))
    }, [dinamicValue])
 
+
    return {
-      isLoading, error, data
+      isLoading, 
+      error, 
+      data, 
    }
 }

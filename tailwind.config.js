@@ -24,7 +24,9 @@ export default {
          padding: {
             headerTop: '80px'
          },
-         
+         gridTemplateColumns: {
+            table_md: '1fr 1fr 250px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr'
+         }
       },
    },
    plugins: [],
