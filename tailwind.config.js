@@ -27,7 +27,10 @@ export default {
          gridTemplateColumns: {
             table_md: '1fr 1fr 250px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr',
             table_sm: '20px 30px 2fr repeat(6,1fr)'
-         }
+         },
+         top: {
+            headerTop: '80px'
+         },
       },
    },
    plugins: [],

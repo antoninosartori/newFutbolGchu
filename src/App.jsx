@@ -8,7 +8,7 @@ function App() {
    return (
       <>
          <Header/>
-         <main className='pt-headerTop'>
+         <main className='pt-headerTop font-roboto'>
             <Route path='/' component={HomePage} />
          </main>
 
