@@ -20,18 +20,18 @@ export default function StandingTable() {
          </form>
 
          <div className="md:max-w-[750px] m-auto">
-            <div className="grid md:p-4 grid-cols-table_sm md:grid-cols-table_md uppercase bg-primary-700 text-white rounded-t-3xl">
-               <div>pos</div>
-               <div></div>
-               <div>equipo</div>
-               <div className="font-semibold">pts</div>
-               <div>pj</div>
-               <div>pg</div>
-               <div>pe</div>
-               <div>pp</div>
-               <div className="hidden md:block">gf</div>
-               <div className="hidden md:block">gc</div>
-               <div>dif</div>
+            <div className="grid  grid-cols-table_sm md:grid-cols-table_md uppercase bg-primary-700 text-white rounded-t-lg">
+               <div className="md:p-4  grid place-items-center">pos</div>
+               <div className="md:p-4  grid place-items-center"></div>
+               <div className="md:p-4  grid place-items-center">equipo</div>
+               <div className="font-semibold md:p-4">pts</div>
+               <div className="md:p-4  grid place-items-center">pj</div>
+               <div className="md:p-4  grid place-items-center">pg</div>
+               <div className="md:p-4  grid place-items-center">pe</div>
+               <div className="md:p-4  grid place-items-center">pp</div>
+               <div className="hidden md:grid place-items-center md:p-4">gf</div>
+               <div className="hidden md:grid place-items-center md:p-4">gc</div>
+               <div className="md:p-4  grid place-items-center">dif</div>
             </div>
             {isLoading &&
                <section className="w-full h-full flex items-center justify-center">
@@ -43,23 +43,23 @@ export default function StandingTable() {
             }
             {
                !isLoading && tabla && tabla?.map((team, idx) => (
-                  <article className="grid md:p-4 grid-cols-table_sm md:grid-cols-table_md odd:bg-slate-100 even:bg-slate-200 last:rounded-b-3xl" key={team.equipo_id}>
-                     <div>{idx + 1}</div>
-                     <div>
+                  <article className="grid  grid-cols-table_sm md:grid-cols-table_md odd:bg-slate-100 even:bg-slate-200 last:rounded-b-lg" key={team.equipo_id}>
+                     <div className="md:p-4 table-hover grid place-items-center">{idx + 1}</div>
+                     <div className="md:p-4 table-hover grid place-items-center">
                         <img className="h-5" src={team.equipo_escudo_url} alt="" />
                      </div>
-                     <div className="">
+                     <div className="md:p-4 table-hover">
                         <span className="hidden md:block capitalize">{team.equipo_nombre.replace('_sub23', '')}</span>
                         <span className="md:hidden uppercase">{team.equipo_nombre_corto}</span>
                      </div>
-                     <div className="font-semibold">{team.puntos}</div>
-                     <div>{team.pj}</div>
-                     <div>{team.pg}</div>
-                     <div>{team.pe}</div>
-                     <div>{team.pp}</div>
-                     <div className="hidden md:block" >{team.gf}</div>
-                     <div className="hidden md:block" >{team.gc}</div>
-                     <div>{team.dif}</div>
+                     <div className="font-semibold md:p-4 table-hover  grid place-items-center">{team.puntos}</div>
+                     <div className="md:p-4 table-hover  grid place-items-center">{team.pj}</div>
+                     <div className="md:p-4 table-hover  grid place-items-center">{team.pg}</div>
+                     <div className="md:p-4 table-hover  grid place-items-center">{team.pe}</div>
+                     <div className="md:p-4 table-hover  grid place-items-center">{team.pp}</div>
+                     <div className="hidden md:grid md:p-4 table-hover place-items-center" >{team.gf}</div>
+                     <div className="hidden md:grid md:p-4 table-hover place-items-center" >{team.gc}</div>
+                     <div className="md:p-4 table-hover grid place-items-center" >{team.dif}</div>
                   </article>
                ))
             }

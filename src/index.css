@@ -12,3 +12,7 @@
 a{
    text-decoration: none;
 }
+
+.table-hover:hover{
+   background-color: #504e66;
+}
