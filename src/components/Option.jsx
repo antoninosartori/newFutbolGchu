@@ -1,5 +1,5 @@
-export default function Option ({value = 'a', text = 'Division'}) {
+export default function Option ({value = 'a', text = 'Division', name = ''}) {
    return(
-      <option value={value}>{text}</option>
+      <option name={name} value={value}>{text}</option>
    )
 }
