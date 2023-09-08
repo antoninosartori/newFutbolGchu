@@ -31,6 +31,15 @@ export default {
          top: {
             headerTop: '80px'
          },
+         borderWidth: {
+            border_1: '1px'
+         },
+         borderColor: {
+            primary: {
+               900: '#1c2039',
+               700: '#504e66'
+            },
+         },
       },
    },
    plugins: [],

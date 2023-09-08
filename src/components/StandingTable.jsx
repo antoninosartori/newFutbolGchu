@@ -19,12 +19,12 @@ export default function StandingTable() {
             </Select>
          </form>
 
-         <div className="md:max-w-[750px] m-auto">
-            <div className="grid  grid-cols-table_sm md:grid-cols-table_md uppercase bg-primary-700 text-white rounded-t-lg">
+         <div className=" m-auto ">
+            <div className="grid  grid-cols-table_sm md:grid-cols-table_md uppercase bg-primary-900 text-white rounded-t-lg">
                <div className="md:p-4  grid place-items-center">pos</div>
                <div className="md:p-4  grid place-items-center"></div>
                <div className="md:p-4  grid place-items-center">equipo</div>
-               <div className="font-semibold md:p-4">pts</div>
+               <div className="grid place-items-center font-semibold md:p-4">pts</div>
                <div className="md:p-4  grid place-items-center">pj</div>
                <div className="md:p-4  grid place-items-center">pg</div>
                <div className="md:p-4  grid place-items-center">pe</div>
