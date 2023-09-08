@@ -8,7 +8,7 @@ export default function StandingTable() {
 
    return (
       <section className="container mx-auto w-full">
-         <form className="flex items-center justify-center gap-4 p-4">
+         <form className="flex items-center justify-start gap-4 p-4">
             <Select onChangeFunction={handleCategoryChange} >
                <Option value='a' text='Division A' />
                <Option value='b' text='Division B' />
