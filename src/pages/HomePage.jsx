@@ -8,7 +8,7 @@ export default function HomePage() {
          <section className="container mx-auto flex justify-center">
             <p>Tu publicidad puede estar aqui</p>
          </section>
-         <section className=" container m-auto flex items-center justify-between gap-4">
+         <section className=" container m-auto flex flex-wrap items-center justify-between gap-4">
 
             < MatchesPreview />
 

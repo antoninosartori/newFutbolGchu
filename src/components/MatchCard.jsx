@@ -1,5 +1,4 @@
 export default function MatchCard({ match = [] }) {
-   console.log(match)
    const {
       partido_id,
       fecha_dia,
@@ -15,7 +14,10 @@ export default function MatchCard({ match = [] }) {
       visitante_corto, 
       visitante_escudo_url 
    } = match
-console.log(local_escudo_url)
+
+   const fecha = new Date(fecha_dia).toISOString()
+   console.log({fecha})
+
    return (
       <article className="grid grid-cols-5 py-4 text-white uppercase hover:bg-primary-700 first:rounded-t-3xl last:rounded-b-3xl">
          <div className="grid place-items-end bold">{local_corto}</div>
