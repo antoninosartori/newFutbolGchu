@@ -12,7 +12,11 @@ export default function HomePage() {
 
             < MatchesPreview />
 
-            < StandingTable />
+            < StandingTable limit={3} category="a" division="primera" />
+            < StandingTable limit={3} category="b" division="primera" />
+
+            {/* < StandingTable isDinamic /> */}
+
 
          </section>
          

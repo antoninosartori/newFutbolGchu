@@ -3,21 +3,29 @@ import Option from "./Option"
 import Select from "./Select"
 import { LoadingSpinner } from "./LoadingSpinner"
 
-export default function StandingTable() {
-   const { tabla, isLoading, error, handleCategoryChange, handleDivisionChange } = useFetchPosiciones()
+export default function StandingTable({
+   isDinamic,
+   limit = 3,
+   category = 'a',
+   division = 'primera'
+}) {
+
+   const { tabla, isLoading, error, handleCategoryChange, handleDivisionChange } = useFetchPosiciones(isDinamic, category, division, limit)
 
    return (
       <section className="container mx-auto w-full">
-         <form className="flex items-center justify-start gap-4 p-4">
-            <Select onChangeFunction={handleCategoryChange} >
-               <Option value='a' text='Division A' />
-               <Option value='b' text='Division B' />
-            </Select>
-            <Select onChangeFunction={handleDivisionChange}>
-               <Option value='primera' text='Primera' />
-               <Option value='sub' text='Sub23' />
-            </Select>
-         </form>
+         {isDinamic &&
+            <form className="flex items-center justify-start gap-4 p-4">
+               <Select onChangeFunction={handleCategoryChange} >
+                  <Option value='a' text='Division A' />
+                  <Option value='b' text='Division B' />
+               </Select>
+               <Select onChangeFunction={handleDivisionChange}>
+                  <Option value='primera' text='Primera' />
+                  <Option value='sub' text='Sub23' />
+               </Select>
+            </form>
+         }
 
          <div className=" m-auto ">
             <div className="grid  grid-cols-table_sm md:grid-cols-table_md uppercase bg-primary-900 text-white rounded-t-lg">
