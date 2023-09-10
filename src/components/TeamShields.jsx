@@ -10,7 +10,7 @@ export default function TeamShields() {
          {isLoading && < LoadingSpinner />}
          {
             !isLoading && !error && teams && teams?.map(team => (
-               <Link href={`/equipos/${team.equipo_id}`} key={team.equipo_id}>
+               <Link href={`equipos/${team.equipo_id}`} key={team.equipo_id}>
                   <img className="w-[40px] h-auto cursor-pointer hover:opacity-25" src={team.equipo_escudo_url} alt="" />
                </Link>
             ))

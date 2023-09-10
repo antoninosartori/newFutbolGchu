@@ -32,5 +32,13 @@ export const getAllTeams = async () => {
    return { equipos, error }
 }
 
+export const getOneTeam = async (teamId) => {
+   const { data: equipo, error } = await supabase
+      .from('equipos')
+      .select('*')
+      .eq('equipo_id',teamId)
+   return { equipo, error }
+}
+
 
 
