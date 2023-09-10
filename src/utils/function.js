@@ -23,7 +23,14 @@ export async function getMatchesBy() {
    return { matches, error }
 }
 
-
+export const getAllTeams = async () => {
+   const { data: equipos, error } = await supabase
+      .from('equipos')
+      .select('*')
+      .eq('equipo_division','primera')
+      .order('equipo_nombre', { ascending: true })
+   return { equipos, error }
+}
 
 
 

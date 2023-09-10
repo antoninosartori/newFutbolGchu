@@ -5,7 +5,7 @@ export default function MatchesPreview (){
    const {matches, isLoading, error} = useFetchMatches()
    console.log({matches})
    return(
-      <div className="flex flex-col w-full md:w-[20%] rounded-3xl">
+      <div className="flex w-full rounded-3xl container m-auto py-4 gap-4 overflow-hidden">
          {matches?.map(match => (
             <MatchCard key={match.partido_id} match={match} />
          ))}

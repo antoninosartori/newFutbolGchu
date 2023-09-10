@@ -12,8 +12,11 @@ export default function StandingTable({
 
    const { tabla, isLoading, error, handleCategoryChange, handleDivisionChange } = useFetchPosiciones(isDinamic, category, division, limit)
 
+   const colors = `first:bg-green-900 `
+
    return (
-      <section className="container mx-auto w-full">
+      <section className="container mx-auto w-full ">
+
          {isDinamic &&
             <form className="flex items-center justify-start gap-4 p-4">
                <Select onChangeFunction={handleCategoryChange} >
@@ -51,7 +54,7 @@ export default function StandingTable({
             }
             {
                !isLoading && tabla && tabla?.map((team, idx) => (
-                  <article className="grid  grid-cols-table_sm md:grid-cols-table_md odd:bg-slate-100 even:bg-slate-200 last:rounded-b-lg" key={team.equipo_id}>
+                  <article className={`grid  grid-cols-table_sm md:grid-cols-table_md odd:bg-slate-100 even:bg-slate-200 last:rounded-b-lg`} key={team.equipo_id}>
                      <div className="md:p-4 table-hover grid place-items-center">{idx + 1}</div>
                      <div className="md:p-4 table-hover grid place-items-center">
                         <img className="h-5" src={team.equipo_escudo_url} alt="" />
@@ -72,7 +75,6 @@ export default function StandingTable({
                ))
             }
          </div>
-
 
       </section>
    )
