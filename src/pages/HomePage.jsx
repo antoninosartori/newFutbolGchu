@@ -16,7 +16,7 @@ export default function HomePage() {
          </section>
          <section className=" container m-auto flex flex-col gap-4">
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
                < StandingTable limit={3} category="a" division="primera" />
                < StandingTable limit={3} category="b" division="primera" />
             </div>
